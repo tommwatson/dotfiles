@@ -39,3 +39,9 @@ alias psql.server='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/
 alias gt='go test -v -cover ./...'
 
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ "$TERM" = "xterm" ]; then
+  export TERM=xterm-256color
+fi
