@@ -10,6 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [ "$TERM" = "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
 # Source base16 256 colourspace script.
 if [[ -s "$HOME/.colours/base16-shell/base16-tomorrow.dark.sh" ]]; then
   source "$HOME/.colours/base16-shell/base16-tomorrow.dark.sh"
@@ -42,9 +46,6 @@ if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [ "$TERM" = "xterm" ]; then
-  export TERM=xterm-256color
-fi
 
 function chpwd() {
   emulate -L zsh
