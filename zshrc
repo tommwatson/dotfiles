@@ -45,3 +45,8 @@ if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
+
+function chpwd() {
+  emulate -L zsh
+  ls -F
+}

@@ -28,8 +28,8 @@ if [[ "$OSTYPE" == linux* ]]; then
   export TERM="xterm-256color"
 fi
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 #
