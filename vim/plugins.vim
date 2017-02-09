@@ -70,7 +70,7 @@ let g:go_highlight_build_constraints = 1
 let g:vim_json_syntax_conceal = 0                           " Don't hide quotes in JSON.
 
 " fzf
-let $FZF_DEFAULT_COMMAND='ag -g ""'                         " Use ag to obey ignore files
+"let $FZF_DEFAULT_COMMAND='ag -g ""'                         " Use ag to obey ignore files
 let g:fzf_layout = {}                                       " Disable fzf-tmux
 
 " This is the default extra key bindings
@@ -88,3 +88,4 @@ let test#strategy = 'neovim'
 
 " neomake
 autocmd! BufWritePost * Neomake
+let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace() # XXX BREAKPOINT'

@@ -15,8 +15,8 @@ if [ "$TERM" = "xterm" ]; then
 fi
 
 # Source base16 256 colourspace script.
-if [[ -s "$HOME/.colours/base16-shell/base16-tomorrow.dark.sh" ]]; then
-  source "$HOME/.colours/base16-shell/base16-tomorrow.dark.sh"
+if [[ -s "$HOME/.colours/base16-shell/base16-google.dark.sh" ]]; then
+  source "$HOME/.colours/base16-shell/base16-google.dark.sh"
 fi
 
 # Load direnv
@@ -44,10 +44,11 @@ alias gt='go test -v -cover ./...'
 
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 function chpwd() {
   emulate -L zsh
   ls -F
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
