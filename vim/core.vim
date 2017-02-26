@@ -7,13 +7,21 @@
 " -----------------------------
 " Color
 " -----------------------------
-let base16colorspace=256
 set background=dark
-colorscheme base16-colors
+let base16colorspace=256
+colorscheme base16-google-dark
 
-" Force 256 color mode if available
-if $TERM =~ '-256color'
-  set t_Co=256
+
+if &term =~ '^xterm'
+  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+  execute "set t_kP=\e[5;*~"
+  execute "set t_kN=\e[6;*~"
+         
+" Arrow keys http://unix.stackexchange.com/a/34723
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
 endif
 
 " -----------------------------

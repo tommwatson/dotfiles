@@ -10,9 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-if [ "$TERM" = "xterm" ]; then
-  export TERM=xterm-256color
-fi
+# if [ "$TERM" = "xterm" ]; then
+#   export TERM=xterm-256color
+# fi
 
 # Source base16 256 colourspace script.
 if [[ -s "$HOME/.colours/base16-shell/base16-google.dark.sh" ]]; then
@@ -41,6 +41,9 @@ alias s='spring'
 alias be='bundle exec'
 alias psql.server='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 alias gt='go test -v -cover ./...'
+alias python='python3'
+alias weather='curl wttr.in/sydney'
+alias w='curl -s -N wttr.in/sydney | head -n 7'
 
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 
