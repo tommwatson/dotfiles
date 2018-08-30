@@ -40,6 +40,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'dyng/auto_mkdir'
+Plug 'posva/vim-vue'
 
 " Themes
 Plug 'chriskempson/base16-vim'

@@ -55,3 +55,5 @@ function chpwd() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export LD_LIBRARY_PATH=/usr/local/lib/
