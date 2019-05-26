@@ -13,10 +13,11 @@ fi
 # if [ "$TERM" = "xterm" ]; then
 #   export TERM=xterm-256color
 # fi
+export TERM=xterm-256color
 
 # Source base16 256 colourspace script.
-if [[ -s "$HOME/.colours/base16-shell/base16-google.dark.sh" ]]; then
-  source "$HOME/.colours/base16-shell/base16-google.dark.sh"
+if [[ -s "$HOME/.colours/base16-shell/scripts/base16-outrun-dark.sh" ]]; then
+  source "$HOME/.colours/base16-shell/scripts/base16-outrun-dark.sh"
 fi
 
 # Load direnv
@@ -28,7 +29,7 @@ if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 # fi
 
 # Aliases
-unalias gb
+# unalias gb
 
 alias a='tmux attach -t'
 alias g='git'
@@ -57,3 +58,7 @@ function chpwd() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export LD_LIBRARY_PATH=/usr/local/lib/
+export PATH=/home/tom/julia/julia-1.1.0/bin:$PATH
+
+. /home/tom/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+

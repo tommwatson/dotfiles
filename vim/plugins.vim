@@ -3,9 +3,10 @@
 let g:ycm_collect_identifiers_from_tags_files = 1            " Use tags files.
 let g:ycm_seed_identifiers_with_syntax = 1                   " Use identifiers from syntax files.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1  " Use identifiers from comments
-let g:ycm_complete_in_comments = 1                           " Also complete within comments
+let g:ycm_complete_in_comments = 0                           " Don't complete within comments
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_add_preview_to_completeopt = 1
 
 " " ag.vim
 let g:ag_prg="ag --column --smart-case --ignore \"*.log\""   " Ignore log files.
@@ -30,6 +31,8 @@ let g:pymode_lint_cwindow = 0
 let g:pymode_rope = 0
 let g:pymode_lint = 0
 let g:pymode_doc = 0
+let g:pymode_python = 'python3'
+let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace() # XXX BREAKPOINT'
 
 " vim-rails
 
@@ -83,9 +86,11 @@ let g:fzf_action = {
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 " vim-test
-let test#python#runner = 'tox'
-let test#strategy = 'neovim'
+" let test#python#runner = 'tox'
+" let test#strategy = 'neovim'
 
 " neomake
-autocmd! BufWritePost * Neomake
-let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace() # XXX BREAKPOINT'
+" autocmd! BufWritePost * Neomake
+
+" julia-vim
+let g:default_julia_version = "1.1"

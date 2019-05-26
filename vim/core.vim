@@ -9,7 +9,8 @@
 " -----------------------------
 set background=dark
 let base16colorspace=256
-colorscheme base16-google-dark
+set t_Co=256
+colorscheme base16-outrun-dark
 
 
 if &term =~ '^xterm'
@@ -125,6 +126,7 @@ set fillchars+=stl:\ ,stlnc:\ " Space.       " Disable status line fill chars.
 set showcmd                                  " Show last command.
 set noshowmode                               " Don't show the mode since airline shows it
 set title                                    " Set the title of the window in the terminal to the file
+set number
 
 if exists('+colorcolumn')
   highlight colorcolumn ctermbg=236 guibg=#262D51
@@ -141,5 +143,6 @@ set t_vb=
 " Languages
 " -----------------------------
 au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 smarttab expandtab
+au FileType julia setlocal tabstop=4 softtabstop=4 shiftwidth=4 smarttab expandtab
 au FileType go setlocal noexpandtab nolist
 
