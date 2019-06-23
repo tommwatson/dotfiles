@@ -1,5 +1,13 @@
-" YouCompleteMe
+" Julia-vim
+let g:julia_blocks = 0
+let g:latex_to_unicode_tab = 0
+let g:latex_to_unicode_auto = 0
+let g:latex_to_unicode_suggestions = 0
+let g:latex_to_unicode_eager = 0
+let g:latex_to_unicode_keymap = 0
+let g:default_julia_version = "1.1"
 
+" YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1            " Use tags files.
 let g:ycm_seed_identifiers_with_syntax = 1                   " Use identifiers from syntax files.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1  " Use identifiers from comments
@@ -7,6 +15,7 @@ let g:ycm_complete_in_comments = 0                           " Don't complete wi
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 1
+" let g:ycm_server_python_interpreter = '/usr/bin/python3.6'
 
 " " ag.vim
 let g:ag_prg="ag --column --smart-case --ignore \"*.log\""   " Ignore log files.
@@ -32,7 +41,7 @@ let g:pymode_rope = 0
 let g:pymode_lint = 0
 let g:pymode_doc = 0
 let g:pymode_python = 'python3'
-let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace() # XXX BREAKPOINT'
+let g:pymode_breakpoint_cmd = 'import bpdb; bpdb.set_trace() # XXX BREAKPOINT'
 
 " vim-rails
 

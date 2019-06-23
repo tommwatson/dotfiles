@@ -58,7 +58,7 @@ function chpwd() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export LD_LIBRARY_PATH=/usr/local/lib/
-export PATH=/home/tom/julia/julia-1.1.0/bin:$PATH
+export PATH=$PATH:${HOME}/julia/julia-1.1.0/bin
 
 . /home/tom/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
