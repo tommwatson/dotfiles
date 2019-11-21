@@ -60,7 +60,7 @@ function chpwd() {
 export LD_LIBRARY_PATH=/usr/local/lib/
 export PATH=$PATH:${HOME}/julia/julia-1.1.0/bin
 
-. /home/tom/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /home/tom/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
