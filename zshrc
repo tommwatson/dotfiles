@@ -34,7 +34,7 @@ if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 alias a='tmux attach -t'
 alias g='git'
 alias v='vim'
-alias n='nvim'
+#alias n='nvim'
 alias t='tmux'
 alias c='cd'
 alias z='zeus'
@@ -61,4 +61,13 @@ export LD_LIBRARY_PATH=/usr/local/lib/
 export PATH=$PATH:${HOME}/julia/julia-1.1.0/bin
 
 . /home/tom/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+source ~/.profile
 

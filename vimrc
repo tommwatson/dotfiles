@@ -42,6 +42,7 @@ Plug 'Valloric/YouCompleteMe'
 " Plug 'dyng/auto_mkdir'
 " Plug 'posva/vim-vue'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'cespare/vim-toml'
 
 " Themes
 Plug 'chriskempson/base16-vim'
